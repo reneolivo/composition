@@ -1,0 +1,11 @@
+.bb_PlayersList {
+  text-align: center;
+
+  img {
+    border: 6px solid var(--primary);
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 1em;
+    max-width: 150px;
+  }
+}
