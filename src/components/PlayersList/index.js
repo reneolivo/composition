@@ -6,5 +6,5 @@ import './PlayersList.scss';
 })
 export default class PlayersList {
   @Prop({ default: 'table' })
-  theme: String;
+  theme;
 }
