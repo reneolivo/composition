@@ -1,3 +1,18 @@
 <div class="bb_PlayersView">
-  <PlayersList></PlayersList>
+  <h1>Waaaagh Boyz</h1>
+  <button
+    class="btn btn-sm"
+    v-bind:class="{'btn-primary': selectedTheme === 'cards'}"
+    v-on:click="selectTheme('cards');"
+  >
+    <i class="fas fa-address-card"></i>
+  </button>
+  <button
+    class="btn btn-sm"
+    v-bind:class="{'btn-primary': selectedTheme === 'table'}"
+    v-on:click="selectTheme('table');"
+  >
+    <i class="fas fa-table"></i>
+  </button>
+  <PlayersList v-bind:theme="selectedTheme"></PlayersList>
 </div>

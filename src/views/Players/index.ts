@@ -7,4 +7,10 @@ import PlayersList from '@/components/PlayersList';
     PlayersList,
   },
 })
-export default class Players {}
+export default class Players {
+  selectedTheme = 'cards';
+  
+  selectTheme(theme) {
+    this.selectedTheme = theme;
+  }
+}

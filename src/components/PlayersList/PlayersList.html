@@ -1,34 +1,83 @@
 <div class="bb__PlayersList">
-  <div class="card" v-for="player in [1,2,3,4,5,6,7]" :key="player">
-    <img class="card-img-top" src="./orc-thrower.jpg" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Trezas Hollowfist</h5>
-      <h6 class="card-title">Thrower</h6>
-      <div class="card-text row">
-        <div class="bb__PlayersList__attributes col-sm-6">
-          <i class="fas fa-football-ball"></i> AG 3<br />
-          <i class="fas fa-shoe-prints"></i> MA 6<br />
-          <i class="fas fa-shield-alt"></i> AV 9
+  <div
+    class="bb__PlayersList--cards"
+    v-if="theme === 'cards'"
+  >
+    <div class="card" v-for="player in [1,2,3,4,5,6,7]" :key="player">
+      <img class="card-img-top" src="./orc-thrower.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Trezas Hollowfist</h5>
+        <h6 class="card-title">Thrower</h6>
+        <div class="card-text row">
+          <div class="bb__PlayersList__attributes col-sm-6">
+            <i class="fas fa-football-ball"></i> AG 3<br />
+            <i class="fas fa-shoe-prints"></i> MA 6<br />
+            <i class="fas fa-shield-alt"></i> AV 9
+          </div>
+          <ul class="bb__PlayersList__skills col-sm-6">
+            <li>Sure Hands</li>
+            <li>Throw</li>
+          </ul>
         </div>
-        <ul class="bb__PlayersList__skills col-sm-6">
-          <li>Sure Hands</li>
-          <li>Throw</li>
-        </ul>
-      </div>
-      <div class="bb__PlayersList__actions">
-        <button
-          class="btn btn-secondary btn-sm"
-          title="Put on the market"
-        >
-          <i class="fas fa-cash-register"></i>
-        </button>
-        <button
-          class="btn btn-danger btn-sm"
-          title="Kick out"
-        >
-          <i class="fas fa-user-slash"></i>
-        </button>
+        <div class="bb__PlayersList__actions">
+          <button
+            class="btn btn-secondary btn-sm"
+            title="Put on the market"
+          >
+            <i class="fas fa-cash-register"></i>
+          </button>
+          <button
+            class="btn btn-danger btn-sm"
+            title="Kick out"
+          >
+            <i class="fas fa-user-slash"></i>
+          </button>
+        </div>
       </div>
     </div>
+  </div>
+  <div
+    class="bb__PlayersList--table"
+    v-if="theme === 'table'"
+  >
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Player</th>
+          <th><i class="fas fa-football-ball"></i> AG</th>
+          <th><i class="fas fa-shoe-prints"></i> MA</th>
+          <th><i class="fas fa-shield-alt"></i> AV</th>
+          <th>Skills</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="player in [1,2,3,4,5,6,7]" :key="player">
+          <td>
+            <img src="./orc-thrower.jpg" alt="Card image cap">
+            <h5>Trezas Hollowfist</h5>
+            <h6>Thrower</h6>
+          </td>
+          <td>3</td>
+          <td>6</td>
+          <td>9</td>
+          <td>Sure Hands, Throw</td>
+          <td>
+            <button
+              class="btn btn-secondary btn-sm"
+              title="Put on the market"
+            >
+              <i class="fas fa-cash-register"></i>
+            </button>
+            <button
+              class="btn btn-danger btn-sm"
+              title="Kick out"
+            >
+              <i class="fas fa-user-slash"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
