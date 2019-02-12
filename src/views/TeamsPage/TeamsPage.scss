@@ -1,0 +1,21 @@
+.bb__TeamsPage {
+  .card {
+    margin: 15px;
+    max-width: 175px;
+    padding: 10px 10px 30px 10px;
+    
+    a {
+      color: white;
+      transition: all 0.2s;
+    }
+
+    a:hover {
+      text-decoration: none;
+      transform: scale(1.3);
+    }
+    
+    .card-title {
+      margin-bottom: 0;
+    }
+  }
+}

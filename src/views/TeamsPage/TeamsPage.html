@@ -1,0 +1,21 @@
+<div class="bb__TeamsPage container">
+  <div class="card-deck">
+    <div class="card"
+      v-for="team in teams"
+      :key="team.id"
+      v-bind:style="{backgroundColor: team.color}"
+     >
+      <router-link
+        :to="'/teams/'+team.id"
+      >
+        <img class="card-img-top" :src="'assets/races/'+team.race+'.png'" />
+        <h4 class="card-title">
+          {{team.name}}
+        </h4>
+        <h6 class="card-title">
+          {{team.race}}
+        </h6>
+      </router-link>
+    </div>
+  </div>
+</div>

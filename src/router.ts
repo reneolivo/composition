@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './views/Home.vue';
 import Players from './views/Players';
+import TeamsPage from './views/TeamsPage';
 
 Vue.use(Router);
 
@@ -13,7 +14,12 @@ export default new Router({
       component: Home,
     },
     {
-      path: '/players',
+      path: '/teams',
+      name: 'teams',
+      component: TeamsPage,
+    },
+    {
+      path: '/teams/:id',
       name: 'players',
       component: Players,
     },

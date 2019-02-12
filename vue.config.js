@@ -1,3 +1,5 @@
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
 module.exports = {
   runtimeCompiler: true,
   configureWebpack: {
@@ -10,6 +12,12 @@ module.exports = {
           }
       ]
     },
+    plugins: [
+      new CopyWebpackPlugin([{
+        from: 'src/assets',
+        to: 'assets',
+      }]),
+    ]
   },
   devServer: {
     disableHostCheck: true
