@@ -1,5 +1,5 @@
 <div class="bb_PlayersView">
-  <h1>Waaaagh Boyz</h1>
+  <h1 v-bind:style="{color: team.color}">{{team.name}}</h1>
   <button
     class="btn btn-sm"
     v-bind:class="{'btn-primary': selectedTheme === 'cards'}"
@@ -14,5 +14,9 @@
   >
     <i class="fas fa-table"></i>
   </button>
-  <PlayersList v-bind:theme="selectedTheme"></PlayersList>
+  <PlayersList
+    v-bind:players="players"
+    v-bind:team="team"
+    v-bind:theme="selectedTheme"
+  ></PlayersList>
 </div>

@@ -5,6 +5,12 @@ import './PlayersList.scss';
   template: require('./PlayersList.html'),
 })
 export default class PlayersList {
+  @Prop()
+  players;
+
+  @Prop()
+  team;
+
   @Prop({ default: 'table' })
   theme;
 }

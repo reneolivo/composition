@@ -3,20 +3,31 @@
     class="bb__PlayersList--cards"
     v-if="theme === 'cards'"
   >
-    <div class="card" v-for="player in [1,2,3,4,5,6,7]" :key="player">
-      <img class="card-img-top" src="./orc-thrower.jpg" alt="Card image cap">
+    <div
+      class="card"
+      v-for="player in players"
+      :key="player.name"
+    >
+      <img
+        class="card-img-top"
+        src="./orc-thrower.jpg"
+        alt="Card image cap"
+        v-bind:style="{borderColor: team.color}"
+      />
       <div class="card-body">
-        <h5 class="card-title">Trezas Hollowfist</h5>
-        <h6 class="card-title">Thrower</h6>
+        <h5 class="card-title">{{player.name}}</h5>
+        <h6 class="card-title">{{player.position}}</h6>
         <div class="card-text row">
           <div class="bb__PlayersList__attributes col-sm-6">
-            <i class="fas fa-football-ball"></i> AG 3<br />
-            <i class="fas fa-shoe-prints"></i> MA 6<br />
-            <i class="fas fa-shield-alt"></i> AV 9
+            <i class="fas fa-fist-raised"></i> ST {{player.strength}}<br />
+            <i class="fas fa-football-ball"></i> AG {{player.agility}}<br />
+            <i class="fas fa-shoe-prints"></i> MA {{player.movement}}<br />
+            <i class="fas fa-shield-alt"></i> AV {{player.armor}}
           </div>
           <ul class="bb__PlayersList__skills col-sm-6">
-            <li>Sure Hands</li>
-            <li>Throw</li>
+            <li v-for="skill in player.skills" :key="skill">
+              {{skill}}
+            </li>
           </ul>
         </div>
         <div class="bb__PlayersList__actions">
@@ -44,6 +55,7 @@
       <thead class="thead-dark">
         <tr>
           <th>Player</th>
+          <th><i class="fas fa-fist-raised"></i> ST</th>
           <th><i class="fas fa-football-ball"></i> AG</th>
           <th><i class="fas fa-shoe-prints"></i> MA</th>
           <th><i class="fas fa-shield-alt"></i> AV</th>
@@ -52,16 +64,20 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="player in [1,2,3,4,5,6,7]" :key="player">
+        <tr v-for="player in players" :key="player.name">
           <td>
-            <img src="./orc-thrower.jpg" alt="Card image cap">
-            <h5>Trezas Hollowfist</h5>
-            <h6>Thrower</h6>
+            <img
+              src="./orc-thrower.jpg" alt="Card image cap"
+              v-bind:style="{borderColor: team.color}"
+            >
+            <h5>{{player.name}}</h5>
+            <h6>{{player.position}}</h6>
           </td>
-          <td>3</td>
-          <td>6</td>
-          <td>9</td>
-          <td>Sure Hands, Throw</td>
+          <td>{{player.strength}}</td>
+          <td>{{player.agility}}</td>
+          <td>{{player.movement}}</td>
+          <td>{{player.armor}}</td>
+          <td>{{player.skills.join(', ')}}</td>
           <td>
             <button
               class="btn btn-secondary btn-sm"
