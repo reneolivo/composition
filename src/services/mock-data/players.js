@@ -2,6 +2,7 @@ export default [
   {
     teamId: 1,
     name: 'Siegmund Neumayer',
+    image: '/assets/players/human-thrower.jpg',
     position: 'Thrower',
     agility: 3,
     strength: 3,
@@ -15,6 +16,7 @@ export default [
   {
     teamId: 1,
     name: 'Norman Wahler',
+    image: '/assets/players/human-catcher.png',
     position: 'Catcher',
     agility: 3,
     strength: 2,
@@ -28,6 +30,7 @@ export default [
   {
     teamId: 1,
     name: 'Meinolf Klügmann',
+    image: '/assets/players/human-catcher.png',
     position: 'Catcher',
     agility: 3,
     strength: 2,
@@ -41,54 +44,59 @@ export default [
   {
     teamId: 1,
     name: 'Hildebrand Buxbaum',
+    image: '/assets/players/human-blitzer.jpg',
     position: 'Blitzer',
     agility: 3,
     strength: 3,
     movement: 7,
     armor: 8,
     skills: [
-      'Block'  
+      'Block'
     ],
   },
   {
     teamId: 1,
     name: 'Liebhard Drachmann',
+    image: '/assets/players/human-blitzer.jpg',
     position: 'Blitzer',
     agility: 3,
     strength: 3,
     movement: 7,
     armor: 8,
     skills: [
-      'Block'  
+      'Block'
     ],
   },
   {
     teamId: 1,
     name: 'Wigmar Cullmann',
+    image: '/assets/players/human-blitzer.jpg',
     position: 'Blitzer',
     agility: 3,
     strength: 3,
     movement: 7,
     armor: 8,
     skills: [
-      'Block'  
+      'Block'
     ],
   },
   {
     teamId: 1,
     name: 'Ernest Scheibel',
+    image: '/assets/players/human-blitzer.jpg',
     position: 'Blitzer',
     agility: 3,
     strength: 3,
     movement: 7,
     armor: 8,
     skills: [
-      'Block'  
+      'Block'
     ],
   },
   {
     teamId: 1,
     name: 'Grimwald Goldfarb',
+    image: '/assets/players/human-lineman.jpg',
     position: 'Lineman',
     agility: 3,
     strength: 3,
@@ -99,6 +107,7 @@ export default [
   {
     teamId: 1,
     name: 'Bert Reimold',
+    image: '/assets/players/human-lineman.jpg',
     position: 'Lineman',
     agility: 3,
     strength: 3,
@@ -109,6 +118,7 @@ export default [
   {
     teamId: 1,
     name: 'Arnulf Lasch',
+    image: '/assets/players/human-lineman.jpg',
     position: 'Lineman',
     agility: 3,
     strength: 3,
@@ -119,6 +129,7 @@ export default [
   {
     teamId: 1,
     name: 'Witold Schmidt',
+    image: '/assets/players/human-lineman.jpg',
     position: 'Lineman',
     agility: 3,
     strength: 3,
@@ -129,6 +140,7 @@ export default [
   {
     teamId: 2,
     name: 'Trezas Hollowfist',
+    image: '/assets/players/orc-thrower.jpg',
     position: 'Thrower',
     agility: 3,
     strength: 3,
@@ -142,6 +154,7 @@ export default [
   {
     teamId: 2,
     name: 'Gol Brightshift',
+    image: '/assets/players/orc-blitzer.jpg',
     position: 'Blitzer',
     agility: 3,
     strength: 3,
@@ -154,6 +167,7 @@ export default [
   {
     teamId: 2,
     name: 'Grul Vicefang',
+    image: '/assets/players/orc-blitzer.jpg',
     position: 'Blitzer',
     agility: 3,
     strength: 3,
@@ -166,6 +180,7 @@ export default [
   {
     teamId: 2,
     name: 'Mus Barrenheart',
+    image: '/assets/players/orc-blitzer.jpg',
     position: 'Blitzer',
     agility: 3,
     strength: 3,
@@ -178,6 +193,7 @@ export default [
   {
     teamId: 2,
     name: 'Thularl Stonekill',
+    image: '/assets/players/orc-blitzer.jpg',
     position: 'Blitzer',
     agility: 3,
     strength: 3,
@@ -190,6 +206,7 @@ export default [
   {
     teamId: 2,
     name: 'Trusuk Sourbreath',
+    image: '/assets/players/black-orc.jpg',
     position: 'Black Orc',
     agility: 2,
     strength: 4,
@@ -200,6 +217,7 @@ export default [
   {
     teamId: 2,
     name: 'Kurangaz Stonelock',
+    image: '/assets/players/black-orc.jpg',
     position: 'Black Orc',
     agility: 2,
     strength: 4,
@@ -210,6 +228,7 @@ export default [
   {
     teamId: 2,
     name: 'Brast Tuskteeth',
+    image: '/assets/players/black-orc.jpg',
     position: 'Black Orc',
     agility: 2,
     strength: 4,
@@ -220,6 +239,7 @@ export default [
   {
     teamId: 2,
     name: 'Hath Halffist',
+    image: '/assets/players/black-orc.jpg',
     position: 'Black Orc',
     agility: 2,
     strength: 4,
@@ -230,6 +250,7 @@ export default [
   {
     teamId: 2,
     name: 'Brulerl Quickmaul',
+    image: '/assets/players/lineorc.jpg',
     position: 'Lineorc',
     agility: 3,
     strength: 3,
@@ -240,6 +261,7 @@ export default [
   {
     teamId: 2,
     name: 'Zolgorg Stormheart',
+    image: '/assets/players/lineorc.jpg',
     position: 'Lineorc',
     agility: 3,
     strength: 3,

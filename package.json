@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve --port $PORT --host $IP --public $C9_HOSTNAME",
+    "serve": "vue-cli-service serve",
+    "serve-c9": "vue-cli-service serve --port $PORT --host $IP --public $C9_HOSTNAME",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },

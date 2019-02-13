@@ -8,12 +8,12 @@
       v-for="player in players"
       :key="player.name"
     >
-      <img
-        class="card-img-top"
-        src="./orc-thrower.jpg"
-        alt="Card image cap"
-        v-bind:style="{borderColor: team.color}"
-      />
+      <figure class="card-img-top" v-bind:style="{borderColor: team.color}">
+        <img
+          v-bind:src="player.image"
+          alt="Blood Bowl Player"
+        />
+      </figure>
       <div class="card-body">
         <h5 class="card-title">{{player.name}}</h5>
         <h6 class="card-title">{{player.position}}</h6>
@@ -67,9 +67,10 @@
         <tr v-for="player in players" :key="player.name">
           <td>
             <img
-              src="./orc-thrower.jpg" alt="Card image cap"
+              v-bind:src="player.image"
+              alt="Blood Bowl Player"
               v-bind:style="{borderColor: team.color}"
-            >
+            />
             <h5>{{player.name}}</h5>
             <h6>{{player.position}}</h6>
           </td>
