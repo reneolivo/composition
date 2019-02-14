@@ -11,6 +11,12 @@
     </template>
     Do you really want to delete it?
   </Confirm>
+  <SellPlayerModal
+    modalId="SellPlayerModal"
+    v-bind:player="selectedPlayer"
+    v-bind:onConfirm="onPlayerSold"
+  >
+  </SellPlayerModal>
   <div
     class="bb__PlayersList--cards"
     v-if="theme === 'cards'"
@@ -46,6 +52,8 @@
           <button
             class="btn btn-secondary btn-sm"
             title="Put on the market"
+            data-toggle="modal" data-target="#SellPlayerModal"
+            @click="selectedPlayer = player"
           >
             <i class="fas fa-cash-register"></i>
           </button>
@@ -96,6 +104,8 @@
             <button
               class="btn btn-secondary btn-sm"
               title="Put on the market"
+              @click="selectedPlayer = player"
+              data-toggle="modal" data-target="#SellPlayerModal"
             >
               <i class="fas fa-cash-register"></i>
             </button>
