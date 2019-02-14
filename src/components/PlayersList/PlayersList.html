@@ -1,4 +1,16 @@
 <div class="bb__PlayersList">
+  <Confirm
+    modalId="playerDeleteConfirmModal"
+    v-bind:onConfirm="onConfirmPlayerDelete"
+  >
+    <template v-slot:title>
+      <h3 class="text-danger">
+        <i class="fas fa-exclamation-triangle"></i>
+        Warning
+      </h3>
+    </template>
+    Do you really want to delete it?
+  </Confirm>
   <div
     class="bb__PlayersList--cards"
     v-if="theme === 'cards'"
@@ -40,6 +52,7 @@
           <button
             class="btn btn-danger btn-sm"
             title="Kick out"
+            data-toggle="modal" data-target="#playerDeleteConfirmModal"
           >
             <i class="fas fa-user-slash"></i>
           </button>
@@ -89,6 +102,7 @@
             <button
               class="btn btn-danger btn-sm"
               title="Kick out"
+              data-toggle="modal" data-target="#playerDeleteConfirmModal"
             >
               <i class="fas fa-user-slash"></i>
             </button>
