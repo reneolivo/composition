@@ -1,0 +1,7 @@
+<div>
+  <h1>New {{team.name}} Player</h1>
+  <div class="container">
+    <HumansForm v-if="team.race === 'Humans'"></HumansForm>
+    <OrcsForm v-if="team.race === 'Orcs'"></OrcsForm>
+  </div>
+</div>

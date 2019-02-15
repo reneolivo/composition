@@ -11,14 +11,14 @@ import TeamsService from '@/services/TeamService';
 export default class Players {
   selectedTheme = 'cards';
   team = null;
-  
+
   created() {
-    const teamId = this.$route.params.id;
-    
+    const teamId = this.$route.params.teamId;
+
     this.team = TeamsService.getTeamById(teamId);
     this.players = TeamsService.getPlayersByTeam(teamId);
   }
-  
+
   selectTheme(theme) {
     this.selectedTheme = theme;
   }
