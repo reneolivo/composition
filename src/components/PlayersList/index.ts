@@ -1,6 +1,6 @@
-import { Component, Prop } from 'vue-property-decorator';
-import Confirm from '@/components/Confirm';
-import SellPlayerModal from '@/components/SellPlayerModal';
+import { Vue, Component, Prop } from 'vue-property-decorator';
+import Confirm from '@/components/Confirm/index.ts';
+import SellPlayerModal from '@/components/SellPlayerModal/index.ts';
 import './PlayersList.scss';
 
 @Component({
@@ -10,18 +10,17 @@ import './PlayersList.scss';
     SellPlayerModal,
   },
 })
-export default class PlayersList {
+export default class PlayersList extends Vue {
   @Prop()
   players;
 
   @Prop()
   team;
 
-  @Prop()
-  selectedPlayer;
-
   @Prop({ default: 'table' })
   theme;
+
+  selectedPlayer = null;
 
   onConfirmPlayerDelete() {
     console.log('⚠️ Player deleted!');

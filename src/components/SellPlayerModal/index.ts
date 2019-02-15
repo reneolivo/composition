@@ -1,17 +1,17 @@
-import { Component, Prop } from 'vue-property-decorator';
+import { Vue, Component, Prop } from 'vue-property-decorator';
 import $ from 'jquery';
 
 @Component({
   template: require('./SellPlayerModal.html'),
 })
-export default class SellPlayerModal {
+export default class SellPlayerModal extends Vue {
   @Prop()
   modalId;
 
-  @Prop({ default: {} })
+  @Prop({ default: () => ({}) })
   player;
 
-  @Prop({ default: () => {} })
+  @Prop({ default: () => () => {} })
   onConfirm;
 
   amount = null;

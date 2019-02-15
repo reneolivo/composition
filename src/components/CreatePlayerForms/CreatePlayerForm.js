@@ -1,4 +1,6 @@
-export default class CreatePlayerForm {
+import { Vue } from 'vue-property-decorator';
+
+export default class CreatePlayerForm extends Vue {
   player = {};
 
   get playerPrice() {

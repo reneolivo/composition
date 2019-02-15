@@ -1,9 +1,9 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './views/Home.vue';
-import Players from './views/Players';
-import TeamsPage from './views/TeamsPage';
-import CreatePlayerPage from './views/CreatePlayerPage';
+import Players from './views/Players/index.ts';
+import TeamsPage from './views/TeamsPage/index.ts';
+import CreatePlayerPage from './views/CreatePlayerPage/index.ts';
 
 Vue.use(Router);
 

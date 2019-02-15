@@ -1,5 +1,5 @@
-import { Component } from 'vue-property-decorator';
-import PlayersList from '@/components/PlayersList';
+import { Vue, Component } from 'vue-property-decorator';
+import PlayersList from '@/components/PlayersList/index.ts';
 import TeamsService from '@/services/TeamService';
 
 @Component({
@@ -8,7 +8,7 @@ import TeamsService from '@/services/TeamService';
     PlayersList,
   },
 })
-export default class Players {
+export default class Players extends Vue {
   selectedTheme = 'cards';
   team = null;
 

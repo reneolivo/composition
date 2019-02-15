@@ -1,5 +1,5 @@
-import { Component, Prop } from 'vue-property-decorator';
-import CreatePlayerForms from '@/components/CreatePlayerForms';
+import { Vue, Component, Prop } from 'vue-property-decorator';
+import CreatePlayerForms from '@/components/CreatePlayerForms/index.ts';
 import TeamsService from '@/services/TeamService';
 
 @Component({
@@ -8,7 +8,7 @@ import TeamsService from '@/services/TeamService';
     ...CreatePlayerForms,
   }
 })
-export default class CreatePlayerPage {
+export default class CreatePlayerPage extends Vue {
   team = {};
 
   created() {
