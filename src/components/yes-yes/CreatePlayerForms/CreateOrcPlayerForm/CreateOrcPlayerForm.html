@@ -1,0 +1,19 @@
+<CreatePlayerForm
+  v-bind:player="player"
+  v-bind:positions="positions"
+  v-bind:getPlayerPrice="getPlayerPrice"
+>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text">
+        Waaagh Tribe
+      </span>
+    </div>
+    <select class="form-control" v-model="player.waaaghTribe">
+      <option>Axebite</option>
+      <option>Black Fang</option>
+      <option>Ironback</option>
+      <option>Red Sunz</option>
+    </select>
+  </div>
+</CreatePlayerForm>

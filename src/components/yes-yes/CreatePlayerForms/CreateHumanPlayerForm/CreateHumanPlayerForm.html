@@ -1,0 +1,13 @@
+<CreatePlayerForm
+  v-bind:positions="positions"
+  v-bind:getPlayerPrice="getPlayerPrice"
+  v-bind:player="player"
+>
+  <div class="input-group mb-3">
+    <textarea
+      class="form-control"
+      v-model="player.bio"
+      placeholder="Bio"
+    ></textarea>
+  </div>
+</CreatePlayerForm>

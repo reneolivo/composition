@@ -27,7 +27,7 @@ export default new Router({
     },
     {
       path: '/teams/:teamId/create-player',
-      name: 'create-player',
+      name: 'Create Player',
       component: CreatePlayerPage,
     },
     {
@@ -44,6 +44,11 @@ export default new Router({
           path: 'teams/:teamId',
           name: 'Team Players',
           component: yesyes.TeamPlayers,
+        },
+        {
+          path: 'teams/:teamId/create-player',
+          name: 'Create Player',
+          component: yesyes.CreatePlayerPage,
         },
       ],
     },
