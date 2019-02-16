@@ -37,17 +37,17 @@ export default new Router({
       children: [
         {
           path: 'teams',
-          name: 'Teams',
+          name: 'yes-yes/Teams',
           component: TeamsPage,
         },
         {
           path: 'teams/:teamId',
-          name: 'Team Players',
+          name: 'yes-yes/Team Players',
           component: yesyes.TeamPlayers,
         },
         {
           path: 'teams/:teamId/create-player',
-          name: 'Create Player',
+          name: 'yes-yes/Create Player',
           component: yesyes.CreatePlayerPage,
         },
       ],
