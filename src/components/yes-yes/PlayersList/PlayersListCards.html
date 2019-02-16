@@ -1,0 +1,48 @@
+<div class="bb__PlayersList--cards">
+  <div
+    class="card"
+    v-for="player in players"
+    :key="player.name"
+  >
+    <figure class="card-img-top" v-bind:style="{borderColor: team.color}">
+      <img
+        v-bind:src="player.image"
+        alt="Blood Bowl Player"
+      />
+    </figure>
+    <div class="card-body">
+      <h5 class="card-title">{{player.name}}</h5>
+      <h6 class="card-title">{{player.position}}</h6>
+      <div class="card-text row">
+        <div class="bb__PlayersList__attributes col-sm-6">
+          <i class="fas fa-fist-raised"></i> ST {{player.strength}}<br />
+          <i class="fas fa-football-ball"></i> AG {{player.agility}}<br />
+          <i class="fas fa-shoe-prints"></i> MA {{player.movement}}<br />
+          <i class="fas fa-shield-alt"></i> AV {{player.armor}}
+        </div>
+        <ul class="bb__PlayersList__skills col-sm-6">
+          <li v-for="skill in player.skills" :key="skill">
+            {{skill}}
+          </li>
+        </ul>
+      </div>
+      <div class="bb__PlayersList__actions">
+        <button
+          class="btn btn-secondary btn-sm"
+          title="Put on the market"
+          data-toggle="modal" data-target="#SellPlayerModal"
+          @click="$emit('selectPlayer', player)"
+        >
+          <i class="fas fa-cash-register"></i>
+        </button>
+        <button
+          class="btn btn-danger btn-sm"
+          title="Kick out"
+          data-toggle="modal" data-target="#playerDeleteConfirmModal"
+        >
+          <i class="fas fa-user-slash"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

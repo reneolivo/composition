@@ -1,0 +1,11 @@
+.bb__PlayersList--table {
+  img {
+    border: 3px solid var(--primary);
+    float: left;
+    height: 75px;
+    border-radius: 50%;
+    object-fit: none;
+    object-position: 50% 30%;
+    width: 75px;
+  }
+}

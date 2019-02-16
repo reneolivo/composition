@@ -1,0 +1,33 @@
+<div class="bb_PlayersView">
+  <h1 v-bind:style="{color: team.color}">{{team.name}}</h1>
+  <router-link
+    class="btn btn-primary"
+    :to="`teams/${team.id}/create-player`">
+    <i class="fas fa-plus"></i>
+    Create Player
+  </router-link>
+  <hr />
+  <button
+    class="btn btn-sm"
+    v-bind:class="{'btn-primary': selectedTheme === 'Cards'}"
+    v-on:click="selectTheme('Cards');"
+  >
+    <i class="fas fa-address-card"></i>
+  </button>
+  <button
+    class="btn btn-sm"
+    v-bind:class="{'btn-primary': selectedTheme === 'Table'}"
+    v-on:click="selectTheme('Table');"
+  >
+    <i class="fas fa-table"></i>
+  </button>
+  <PlayersList v-bind:selectedPlayer="selectedPlayer">
+    <component
+      :is="`PlayersList${selectedTheme}`"
+      v-bind:players="players"
+      v-bind:team="team"
+      v-on:selectPlayer="(player) => selectedPlayer = player"
+    >
+    </component>
+  </PlayersList>
+</div>

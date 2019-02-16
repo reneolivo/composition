@@ -4,6 +4,7 @@ import Home from './views/Home.vue';
 import Players from './views/Players/index.ts';
 import TeamsPage from './views/TeamsPage/index.ts';
 import CreatePlayerPage from './views/CreatePlayerPage/index.ts';
+import { default as yesyes } from './views/yes-yes';
 
 Vue.use(Router);
 
@@ -30,12 +31,21 @@ export default new Router({
       component: CreatePlayerPage,
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
+      path: '/yes-yes',
+      name: 'yes-yes',
+      component: yesyes.YesYes,
+      children: [
+        {
+          path: 'teams',
+          name: 'Teams',
+          component: TeamsPage,
+        },
+        {
+          path: 'teams/:teamId',
+          name: 'Team Players',
+          component: yesyes.TeamPlayers,
+        },
+      ],
     },
   ],
 });
