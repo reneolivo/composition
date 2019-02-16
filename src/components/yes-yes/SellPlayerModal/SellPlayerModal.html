@@ -1,0 +1,36 @@
+<Modal
+  v-if="player"
+  :modalId="modalId"
+  size="small"
+  v-bind:modalEvents="modalEvents"
+>
+  <template v-slot:title>
+    Sell Player
+  </template>
+  <div>
+    <img :src="player.image" width="50" />
+    <h5>{{player.name}}</h5>
+    <h6>{{player.position}}</h6>
+  </div>
+  <form class="form">
+    <div class="row">
+      <div class="col-md-8">
+        <input
+          class="form-control"
+          type="number"
+          placeholder="Price"
+          v-model="amount"
+        />
+      </div>
+      <div class="col-md-4 text-right">
+        <button
+          type="button"
+          class="btn btn-primary"
+          @click="handleConfirmation()"
+        >
+          Sell
+        </button>
+      </div>
+    </div>
+  </form>
+</Modal>

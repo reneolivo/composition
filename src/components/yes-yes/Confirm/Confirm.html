@@ -1,0 +1,13 @@
+<Modal
+  :modalId="modalId"
+  v-bind:modalEvents="modalEvents"
+>
+  <template v-slot:title>
+    <slot name="title"></slot>
+  </template>
+  <slot></slot>
+  <template v-slot:footer>
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+    <button type="button" class="btn btn-danger" @click="handleConfirmation()">Confirm</button>
+  </template>
+</Modal>

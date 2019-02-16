@@ -1,7 +1,7 @@
 import { Vue, Component, Prop } from 'vue-property-decorator';
 import $ from 'jquery';
-import Confirm from '@/components/Confirm/index.ts';
-import SellPlayerModal from '@/components/SellPlayerModal/index.ts';
+import Confirm from '@/components/yes-yes/Confirm/Confirm.ts';
+import SellPlayerModal from '@/components/yes-yes/SellPlayerModal/SellPlayerModal.ts';
 
 @Component({
   template: require('./PlayersList.html'),
