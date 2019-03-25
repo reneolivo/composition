@@ -12,11 +12,6 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home,
-    },
-    {
-      path: '/teams',
       name: 'teams',
       component: TeamsPage,
     },
@@ -37,17 +32,17 @@ export default new Router({
       children: [
         {
           path: 'teams',
-          name: 'yes-yes/Teams',
+          name: 'yes-yes/teams',
           component: TeamsPage,
         },
         {
           path: 'teams/:teamId',
-          name: 'yes-yes/Team Players',
+          name: 'yes-yes/team-players',
           component: yesyes.TeamPlayers,
         },
         {
           path: 'teams/:teamId/create-player',
-          name: 'yes-yes/Create Player',
+          name: 'yes-yes/create-player',
           component: yesyes.CreatePlayerPage,
         },
       ],
