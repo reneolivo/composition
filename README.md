@@ -1,33 +1,17 @@
-# blood-bowl
+# Composition
 
-Composition Presentation:
 
-https://docs.google.com/presentation/d/1qA3EgMdyxaeiWKq9kHCLgXihoJ-xjI8u0HaC4isx_64/edit#slide=id.g4f70a028e5_0_55
+This is a Vue project with some common front-end development scenarios that can be solved using composition. The project is not intended to be a real Vue application, the only thing that is important are the examples.
 
-## Project setup
+The slides for the presentation can be accessed [here](https://docs.google.com/presentation/d/1qA3EgMdyxaeiWKq9kHCLgXihoJ-xjI8u0HaC4isx_64/edit#slide=id.g4f70a028e5_0_55).
+
+## Running the project
 ```
 npm install
-```
-
-### Compiles and hot-reloads for development
-```
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Structure
 
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+The normal examples are located at `views/` and `components`. The examples using composition
+are located at `views/yes-yes` and `components/yes-yes`.
