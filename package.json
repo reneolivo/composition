@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.7.1",
-    "bootstrap": "^4.2.1",
+    "bootstrap": "^4.3.1",
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.7",
@@ -22,7 +22,7 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.4.0",
     "@vue/cli-plugin-typescript": "^3.4.0",
-    "@vue/cli-service": "^3.4.0",
+    "@vue/cli-service": "^3.5.1",
     "copy-webpack-plugin": "^4.6.0",
     "fibers": "^3.1.1",
     "html-loader": "^0.5.5",
